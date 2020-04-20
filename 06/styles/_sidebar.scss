@@ -1,0 +1,49 @@
+// sidebar-background: #43627D
+
+// sidebar-color: #92B1CC
+
+// sidebar-hover: #385269
+
+@mixin container {
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.548);
+}
+
+$timing: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+.sidebar {
+  width: 200px;
+  @include container;
+  background-color: #43627d;
+  padding: 10px 0;
+  position: absolute;
+  color: #92b1cc;
+  box-shadow: none;
+  transition: $timing;
+}
+
+.sidebar-open {
+  transform: translateX(-50px);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.548);
+}
+
+.sidebar-item {
+  margin: 0;
+  padding: 15px 35px;
+  font-size: 15px;
+  &::before {
+    content: "";
+    width: 6px;
+    height: 8px;
+    border: 1px solid #92b1cc;
+    position: absolute;
+    left: 15px;
+    margin-top: 5px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #385269;
+  }
+}

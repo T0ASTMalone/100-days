@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css" type="text/css" />
+    <script defer src="index.js"></script>
+    <title>Day 6</title>
+  </head>
+  <body>
+    <div class="project">
+      <header class="nav-bar">
+        <div class="header-button hamburger">
+          <div class="circle"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <h3 class="header-title">Notifications</h3>
+        <input class="search-bar" type="text" placeholder="search">
+        <div class="header-button">
+          <img class="header-button search" src="./assets/search.svg" alt="search" ></img>
+        </div>
+      </header>
+
+      <div class="notifications">
+        <div class="notification">
+          <span class="notification-time">10:00 PM</span>
+          <span class="notification-text"><strong>John Walker</strong> posted a photo on your wall.</span>
+        </div>
+        <div class="notification">
+          <span class="notification-time">10:00 PM</span>
+          <span class="notification-text"><strong>Alice Parker</strong> commented your last post.</span>
+        </div>
+        <div class="notification">
+          <span class="notification-time">Yesterday</span>
+          <span class="notification-text"><strong>Luke Wayne</strong> added you as friend.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <p class="sidebar-item">
+        Dashboard
+      </p>
+      <p class="sidebar-item">
+       Profile
+      </p>
+      <p class="sidebar-item">
+        Notifications
+      </p>
+      <p class="sidebar-item">
+        Message
+      </p>
+      <p class="sidebar-item">
+        Settings
+      </p>
+    </div>
+  </body>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,79 @@
+// header-background: #5F98CD
+
+// header buttons: #B2DAFF
+
+@mixin dot($outer, $inner) {
+  border-radius: 50px;
+  border: 2px solid $outer;
+  background-color: $inner;
+}
+
+.nav-bar {
+  background-color: #5f98cd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  height: 60px;
+  color: white;
+}
+
+.header-title {
+  margin: 0;
+  font-size: medium;
+}
+
+.header-button {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.hamburger {
+  flex-direction: column;
+  transform: translateY(-7px);
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #b2daff;
+  margin: 4px auto;
+  border-radius: 3px;
+}
+
+.circle {
+  @include dot(#5f98cd, #b2daff);
+  position: relative;
+  right: -40px;
+  top: 11px;
+  width: 12px;
+  height: 12px;
+}
+
+.search {
+  width: 25px;
+}
+
+.search-bar {
+  z-index: -1;
+  opacity: 0;
+  width: 225px;
+  height: 35px;
+  padding-left: 15px;
+  border: none;
+  border-radius: 50px;
+  transform: translateX(40px);
+  position: absolute;
+  transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.search-bar-show {
+  z-index: 1;
+  transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  opacity: 1;
+  transform: translateX(10px);
+}

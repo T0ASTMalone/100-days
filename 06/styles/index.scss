@@ -1,0 +1,56 @@
+/* 
+
+colors
+
+body-background: #243D53
+
+header-background: #5F98CD
+
+header buttons: #B2DAFF
+
+sidebar-background: #43627D
+
+sidebar-color: #92B1CC
+
+sidebar-hover: #385269
+
+main-color: #666666
+
+main-hover-color: #669CCF
+
+*/
+@import "./header";
+@import "./sidebar";
+@import "./notifications";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #243d53;
+  font-family: "Open Sans", sans-serif;
+}
+
+.project {
+  z-index: 99999;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  @include container;
+  transition: $timing;
+}
+
+.open {
+  transform: translateX(150px);
+}
+
+.hidden {
+  display: none;
+}
