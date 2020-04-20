@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  --bezier: cubic-bezier(0.21, 0.98, 0.6, 0.99);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e56262;
+}
+
+body,
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.459);
+}
+
+.bottom {
+  width: 150px;
+  height: 150px;
+  animation: bottom 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.middle {
+  width: 100px;
+  height: 100px;
+  animation: middle 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+.top {
+  width: 50px;
+  height: 50px;
+  animation: top 2s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+}
+
+@keyframes bottom {
+  0%,
+  10% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes middle {
+  0%,
+  40% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes top {
+  0%,
+  70% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

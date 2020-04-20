@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #42a7a1;
+  font-family: "Roboto", sans-serif;
+}
+
+.info-chart {
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.info-chart-header {
+  color: white;
+  background-color: #f1ba64;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.rev {
+  text-align: right;
+}
+
+.header-text {
+  margin: 0;
+}
+
+.header-text--big {
+  font-size: 20px;
+}
+
+.header-text--small {
+  font-size: 16px;
+}
+
+.chart-key {
+  margin: 0 10px;
+  height: 50px;
+  text-align: right;
+}
+
+.key {
+  margin-left: 20px;
+}
+
+.key::before {
+  content: " ";
+  width: 12px;
+  height: 5px;
+  border-radius: 2px;
+  position: absolute;
+  top: calc(50vh - 43px);
+}
+
+.key-views::before {
+  background-color: #7ba2ff;
+  right: calc(50vw - 45px);
+}
+
+.key-purchases::before {
+  background-color: #fa7373;
+  right: calc(50vw - 113px);
+}
+
+.chart {
+  margin: 0 10px;
+  height: 100px;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+}
+
+.css-chart {
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.line-chart,
+.days {
+  list-style: none;
+}
+
+.line-chart {
+  margin: 0;
+  padding: 0;
+}
+
+.data-point {
+  border-radius: 50%;
+  height: 12px;
+  position: absolute;
+  width: 12px;
+  left: calc(var(--x) - 8px);
+  top: calc(var(--y) - 3px);
+}
+
+.middle-line {
+  border: 1px solid #f2f2f2;
+  width: 380px;
+  position: absolute;
+  transform: translateY(48px);
+}
+
+.days {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  color: #a8a6a6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day {
+  text-align: center;
+  width: 57.14px;
+}
+
+.line-segment {
+  top: var(--y);
+  height: 3px;
+  left: var(--x);
+  position: absolute;
+  width: calc(var(--hypotenuse) * 1px);
+  transform-origin: left bottom;
+  transform: rotate(calc(var(--angle) * 1deg));
+}
+
+.purchases,
+.purchases-point {
+  background-color: #fa7373;
+}
+
+.views,
+.views-point {
+  background-color: #7ba2ff;
+}
+
+.purchases-point {
+  border: 2px solid #fa7373;
+}
+
+.views-point {
+  border: 2px solid #7ba2ff;
+}
+
+.tooltip-text {
+  margin: auto auto;
+}
+
+.tooltip {
+  top: var(--y);
+  left: var(--x);
+  position: absolute;
+  background-color: #7ba2ff;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  transform-origin: bottom center;
+  border-radius: 5px;
+  transform: translateY(-40px) translateX(-17px);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 35%;
+  margin-left: -50px;
+  width: 0;
+  height: 0;
+  border-top: solid 5px #7ba2ff;
+  border-left: solid 5px transparent;
+  border-right: solid 5px transparent;
+}

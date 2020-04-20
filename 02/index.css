@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  --animation-time: 4s;
+}
+
+body,
+.view {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view {
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.sky {
+  height: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  background-color: #7ddffc;
+}
+
+/* 
+Sun #FFEF00 
+Piramid normal #E6E4E4
+Piramid lil shade #E1DFDF
+*/
+
+.ground {
+  height: 30%;
+  background-color: #f0de75;
+  display: flex;
+  justify-content: center;
+}
+
+.sun-container {
+  width: 250px;
+  height: 290px;
+  position: relative;
+  top: 70px;
+  left: 5%;
+  /* background-color: turquoise; */
+  transform-origin: bottom right;
+  transform: rotate(-35deg);
+  animation: sun var(--animation-time) ease-in-out infinite;
+}
+
+.sun {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #ffef00;
+}
+
+.whole {
+  position: relative;
+  top: 175px;
+  right: 21.5%;
+  height: 50%;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.piramid {
+  position: relative;
+  left: 21px;
+  margin: 0;
+  width: 0;
+  height: 0;
+  transform: skewX(-16deg);
+  border-right: 80px solid transparent;
+  border-left: 80px solid transparent;
+  border-bottom: 140px solid #e1dfdf;
+  animation: piramid-left var(--animation-time) ease-in-out infinite;
+}
+
+.right-face {
+  position: relative;
+  right: 51px;
+  margin: 0;
+  width: 0;
+  height: 0;
+  transform: skewX(35deg);
+  border-right: 60px solid transparent;
+  border-left: 60px solid transparent;
+  border-bottom: 140px solid #747278;
+  animation: piramid-right var(--animation-time) ease-in-out infinite;
+}
+
+.piramid-shadow {
+  position: relative;
+  height: 0;
+  width: 0;
+  left: 140px;
+  transform: skewX(70deg);
+  border-right: 138px solid transparent;
+  border-left: 138px solid transparent;
+  border-top: 100px solid #c0b25e;
+  animation: shadow var(--animation-time) ease-in-out infinite;
+}
+
+.fade {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  animation: fade var(--animation-time) ease-in-out infinite;
+}
+
+@keyframes sun {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes shadow {
+  77% {
+    transform: translateX(-275px) skewX(-70deg);
+  }
+}
+
+@keyframes piramid-left {
+  0% {
+    border-bottom: 140px solid #e1dfdf;
+  }
+  30% {
+    border-bottom: 140px solid #e1dfdf;
+  }
+  60% {
+    border-bottom: 140px solid #999999;
+  }
+  100% {
+    border-bottom: 140px solid #747278;
+  }
+}
+
+@keyframes piramid-right {
+  0% {
+    border-bottom: 140px solid #747278;
+  }
+  30% {
+    border-bottom: 140px solid #999999;
+  }
+  50% {
+    border-bottom: 140px solid #e1dfdf;
+  }
+  100% {
+    border-bottom: 140px solid #e1dfdf;
+  }
+}
+
+@keyframes fade {
+  0% {
+    background-color: black;
+  }
+  20% {
+    background-color: transparent;
+  }
+  60% {
+    background-color: transparent;
+  }
+  80% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
