@@ -1,0 +1,62 @@
+@import "./blob";
+@import "./dots";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.project,
+.center,
+.blob,
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.project {
+  background-color: black;
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  -webkit-filter: contrast(30);
+  filter: contrast(30);
+  overflow: hidden;
+}
+
+.center,
+.blob,
+.dot {
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center {
+  width: 90px;
+  height: 90px;
+  background-color: #00ffb8;
+  animation: rotateMain 6s infinite linear;
+  -webkit-filter: contrast(25);
+  filter: blur(10px);
+}
+
+@keyframes rotateMain {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

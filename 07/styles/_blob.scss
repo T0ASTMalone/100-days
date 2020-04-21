@@ -1,0 +1,22 @@
+@import "./imports";
+
+.blob {
+  @include animateBlob(one, 2s, 0s);
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+#first {
+  @include animateBlob(two, 3s, 1s);
+  width: 60px;
+  height: 60px;
+  background-color: #e703ff;
+}
+
+#second {
+  @include animateBlob(two, 3s, 3s);
+  width: 40px;
+  height: 40px;
+  background-color: #e703ff;
+}

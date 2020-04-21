@@ -1,0 +1,139 @@
+@mixin animateBlob($num, $dur, $delay) {
+  animation: $num $dur ease-in-out $delay infinite;
+}
+
+@keyframes one {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  60% {
+    transform: translate(-60px, -60px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes two {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  60% {
+    transform: translate(10px, 0px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes three {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  60% {
+    transform: translate(-50px, -80px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin animateDot($name, $dur, $delay) {
+  animation: $name $dur ease-in-out $delay infinite;
+}
+
+@keyframes dot-one {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  60% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-two {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(-20deg) translate(-200px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-three {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(50px, 50px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-four {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(45deg) translate(80px, 60px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-five {
+  0% {
+    transform: rotate(60deg) translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(60deg) translate(-80px, 90px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-six {
+  0% {
+    transform: rotate(80deg) translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(80deg) translate(80px, -90px);
+  }
+  100% {
+    transform: rotate(80deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-seven {
+  0% {
+    transform: rotate(30deg) translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(30deg) translate(80px, -100px);
+  }
+  100% {
+    transform: rotate(30deg) translate(-50%, -50%);
+  }
+}
+
+@keyframes dot-eight {
+  0% {
+    transform: rotate(-50deg) translate(-50%, -50%);
+  }
+  50% {
+    transform: rotate(-50deg) translate(80px, -100px);
+  }
+  100% {
+    transform: rotate(-50deg) translate(-50%, -50%);
+  }
+}

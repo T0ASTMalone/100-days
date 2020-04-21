@@ -1,0 +1,72 @@
+@import "./imports";
+
+.dot {
+  background-color: white;
+}
+
+#dot-one {
+  @include animateDot(dot-one, 3s, 0s);
+  width: 25px;
+  height: 25px;
+  background-color: #dbff00;
+}
+
+#dot-two {
+  @include animateDot(dot-two, 3s, 2s);
+  width: 25px;
+  height: 25px;
+  background-color: #dbff00;
+}
+
+#dot-three {
+  transition-delay: 3s;
+  @include animateDot(dot-two, 6s, 2s);
+  width: 25px;
+  height: 25px;
+  background-color: #ffae00;
+}
+
+#dot-four {
+  @include animateDot(dot-three, 3s, 2s);
+  width: 27px;
+  height: 27px;
+  background-color: #ffae00;
+}
+
+#dot-four {
+  @include animateDot(dot-four, 4s, 2s);
+  width: 25px;
+  height: 25px;
+  background-color: #ffae00;
+}
+
+#dot-five {
+  @include animateDot(dot-five, 4s, 2s);
+  width: 20px;
+  height: 20px;
+  background-color: #ffae00;
+}
+
+#dot-six {
+  transform: rotate(80deg);
+  @include animateDot(dot-six, 4s, 0s);
+  width: 25px;
+  height: 25px;
+  background-color: #00ffb8;
+}
+
+#dot-seven {
+  transform: rotate(30deg);
+  @include animateDot(dot-seven, 4s, 0.5s);
+  width: 29px;
+  height: 29px;
+  background-color: #00ffb8;
+}
+
+#dot-eight {
+  transform: rotate(-50deg);
+  @include animateDot(dot-eight, 4s, 2s);
+  width: 28px;
+  height: 28px;
+  background-color: #00ffb8;
+}
