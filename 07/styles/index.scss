@@ -47,7 +47,7 @@ body {
   width: 90px;
   height: 90px;
   background-color: #00ffb8;
-  animation: rotateMain 6s infinite linear;
+  animation: rotateMain 6s infinite -1s linear;
   -webkit-filter: contrast(25);
   filter: blur(10px);
 }
