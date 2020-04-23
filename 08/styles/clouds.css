@@ -1,0 +1,59 @@
+.animation {
+  background-color: #1a2238;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: column;
+      -ms-flex-pack: column;
+          justify-content: column;
+}
+
+.clouds-container {
+  height: 80px;
+  width: 100%;
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  overflow: hidden;
+}
+
+.clouds {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.forground-clouds {
+  background-color: #303c5d;
+}
+
+.background-clouds {
+  background-color: #26314f;
+}
+
+#b-right {
+  left: 130px;
+}
+
+#b-left {
+  top: -260px;
+  left: -50px;
+}
+
+#f-right {
+  top: -1020px;
+  left: 40px;
+}
+
+#f-middle {
+  top: -745px;
+  left: -100px;
+}
+
+#f-left {
+  top: -490px;
+  right: -220px;
+}
+/*# sourceMappingURL=clouds.css.map */

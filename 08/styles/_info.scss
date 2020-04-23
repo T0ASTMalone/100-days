@@ -1,0 +1,41 @@
+.today,
+.info,
+.week {
+  display: flex;
+}
+
+.info {
+  z-index: 99999999;
+  height: 20%;
+  background-color: white;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+p {
+  margin: 0;
+}
+
+.today,
+.week {
+  align-items: center;
+}
+
+.week {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.week p {
+  text-align: left;
+}
+
+.temp {
+  font-size: 35px;
+}
+
+.wind-rain {
+  font-size: 12px;
+}

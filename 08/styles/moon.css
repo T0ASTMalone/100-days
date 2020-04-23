@@ -1,0 +1,12 @@
+.moon-container {
+  width: 300px;
+  height: 300px;
+  justify-self: flex-start;
+}
+
+.moon {
+  width: 200px;
+  height: 200px;
+  background-color: #f6edbd;
+}
+/*# sourceMappingURL=moon.css.map */

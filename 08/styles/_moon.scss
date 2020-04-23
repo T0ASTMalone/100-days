@@ -1,0 +1,87 @@
+@import "./animation";
+$moon: #f6edbd;
+$crater: #ece1a8;
+
+.moon-container {
+  width: 100px;
+  height: 100px;
+  justify-self: flex-start;
+  position: absolute;
+  padding: 25px;
+  animation: rise 1s ease-out;
+}
+
+.moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px $moon;
+  background-color: $moon;
+  overflow: hidden;
+}
+
+.crater {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: $crater;
+}
+
+#c-one {
+  top: 65px;
+  right: 35px;
+}
+#c-two {
+  top: 40px;
+  right: 30px;
+  width: 7px;
+  height: 7px;
+}
+#c-three {
+  top: 50px;
+  right: 35px;
+}
+
+#c-four {
+  top: 60px;
+  right: 45px;
+}
+
+#c-five {
+  top: 30px;
+  right: 45px;
+}
+
+#c-six {
+  top: 45px;
+  right: 60px;
+  width: 10px;
+  height: 10px;
+}
+#c-seven {
+  top: 35px;
+  right: 55px;
+  width: 4px;
+  height: 4px;
+}
+#c-eight {
+  top: 45px;
+  right: 50px;
+  width: 3px;
+  height: 3px;
+}
+#c-nine {
+  top: 40px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+}
+#c-ten {
+  bottom: 5px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  position: relative;
+}

@@ -1,0 +1,58 @@
+$rain: #7cbcf3;
+$sky: #1a2238;
+$forground: #26314f;
+$background: #303c5d;
+
+.animation {
+  background-color: $sky;
+  overflow: hidden;
+  display: flex;
+  justify-content: column;
+}
+
+.clouds-container {
+  height: 80px;
+  width: 100%;
+  justify-self: flex-end;
+  align-self: flex-end;
+  overflow: hidden;
+}
+
+.clouds {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.forground-clouds {
+  background-color: $background;
+}
+
+.background-clouds {
+  background-color: $forground;
+}
+
+#b-right {
+  left: 130px;
+}
+
+#b-left {
+  top: -260px;
+  left: -50px;
+}
+
+#f-right {
+  top: -1020px;
+  left: 40px;
+}
+
+#f-middle {
+  top: -745px;
+  left: -100px;
+}
+
+#f-left {
+  top: -490px;
+  right: -220px;
+}
