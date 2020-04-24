@@ -1,0 +1,86 @@
+.contact-open {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  top: -300px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.top {
+  z-index: 1;
+  position: relative;
+  background: url("../assets/wallpaper.jpg");
+  background-size: cover;
+  height: 135px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transform: translateY(-135px);
+}
+
+.exit {
+  border: none;
+  align-self: flex-end;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transform-origin: center center;
+  transform: translateY(-47.5px);
+  &:hover {
+    background-color: white;
+    color: #ec6565;
+  }
+}
+
+.contact-image-small {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 1px solid white;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.bottom {
+  background-color: #ec6565;
+  height: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.5s;
+  transform: translateY(165px);
+}
+
+.name {
+  font-size: 16px;
+  margin: 0 0 20px 0;
+}
+
+.button-bottom {
+  border: 1px solid white;
+  margin: 0 10px;
+  transition: 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  &:hover {
+    background-color: #eb8f8f;
+  }
+}
+
+.contact-image-open {
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transform: translateY(47.5px);
+}
+
+.exit-open {
+  transform: rotate(45deg) translateY(0px);
+}
+
+.open {
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transform: translateY(0px);
+}
+
+.main-open {
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  z-index: 1;
+}

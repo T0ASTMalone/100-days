@@ -1,0 +1,46 @@
+.contacts {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  align-content: space-between;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.contact {
+  display: inline-flex;
+  justify-content: center;
+  width: 145.5px;
+  height: 145.5px;
+  align-items: center;
+  &:hover {
+    button {
+      opacity: 1;
+      transform: scale(1);
+    }
+    img {
+      transition: 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+      filter: blur(1px);
+    }
+  }
+}
+
+.contact-image {
+  position: absolute;
+  width: 145.5px;
+  height: 145.5px;
+}
+
+.open-contact {
+  border: none;
+  transition: 0.3s cubic-bezier(1, 1, 0, 0);
+  opacity: 0;
+  transform: scale(2);
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+}

@@ -1,0 +1,43 @@
+@import "./contacts";
+@import "./contact";
+$main: #ec6565;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $main;
+}
+
+.project {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.561);
+}
+
+.button {
+  width: 37px;
+  height: 37px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: $main;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.icon {
+  width: 18px;
+}
