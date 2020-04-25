@@ -1,0 +1,63 @@
+@for $i from 1 through 9 {
+  .dash-#{$i} {
+    position: relative;
+    height: 3px;
+    margin: auto ($i + 1) + px;
+    width: (2 + $i * 2) + px;
+    border-radius: 10px;
+    background-color: black;
+    animation: dash (0.8 + random(2) / 2) + s linear infinite;
+  }
+}
+
+.ground-container {
+  width: 170px;
+  height: 20px;
+  position: absolute;
+  top: 115px;
+  left: 35px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.air-container {
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  overflow: hidden;
+}
+
+@for $i from 1 through 9 {
+  .air-#{$i} {
+    position: relative;
+    top: (2 + $i * 10);
+    left: 200px;
+    height: 3px;
+    margin: ($i + 5) + px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: black;
+    animation: air (0.8 + random(10) / 10) + s linear infinite;
+  }
+}
+
+@keyframes dash {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes air {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translateX(-250px);
+  }
+}
